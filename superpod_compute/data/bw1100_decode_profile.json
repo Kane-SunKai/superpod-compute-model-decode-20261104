@@ -1,0 +1,3218 @@
+{
+  "version": "decode-waves-final-candidate",
+  "hardware": {
+    "name": "BW1100-MMAC8-L2-directional-LDS-write-v3.2",
+    "cores": 72,
+    "clock_hz": 1300000000.0,
+    "arrays_per_core": 4,
+    "array_rows": 16,
+    "array_cols": 16,
+    "mac_per_cell_per_cycle": 2,
+    "vector_fp16_flops_per_cycle_per_core": 251.73611111111111,
+    "hbm_bandwidth_Bps": 1720000000000.0,
+    "hbm_latency_s": 0.0,
+    "hbm_capacity_bytes": 154602045440,
+    "l2_bytes": 8388608,
+    "l2_bytes_per_cycle": 2990,
+    "source_sram_bytes_per_core": 65536,
+    "shared_budget_bytes_per_core": 65536,
+    "register_budget_bytes_per_core": 786432,
+    "register_reserve_bytes_per_core": 32768,
+    "kernel_launch_s": 0.0,
+    "matrix_k_quantum": 16,
+    "matrix_backend": "mmac",
+    "instruction_m": 16,
+    "instruction_n": 16,
+    "instruction_k": 16,
+    "instruction_issue_cycles": 8,
+    "shared_read_bytes_per_cycle_per_core": 64,
+    "shared_write_bytes_per_cycle_per_core": 59.35200341023225,
+    "l2_read_bytes_per_cycle": 3768,
+    "l2_write_bytes_per_cycle": 2990,
+    "register_partitions_per_core": 4,
+    "register_bytes_per_partition": 196608
+  },
+  "policy": {
+    "bm_values": [
+      16,
+      32,
+      64,
+      128,
+      192,
+      256,
+      384
+    ],
+    "bn_values": [
+      16,
+      32,
+      64,
+      128,
+      192,
+      256,
+      384
+    ],
+    "bk_values": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      512
+    ],
+    "buffer_counts": [
+      1,
+      2
+    ],
+    "add_shape_candidate": true,
+    "matrix_efficiency": 1.0,
+    "charge_hbm_latency": false,
+    "l2_transfer_latency_s": 0.0,
+    "epilogue_s_per_wave": 0.0,
+    "transfer_resource_mode": "independent",
+    "top_k": 5,
+    "input_reuse": true,
+    "initial_cache_state": "warm-if-fit",
+    "device_service_s": 3.121244690369221e-06,
+    "output_chunk_values": [
+      4096,
+      16384
+    ],
+    "output_buffer_counts": [
+      1,
+      2
+    ],
+    "calibration_hardware_sha256": "",
+    "register_buffer_counts": [
+      1,
+      2
+    ]
+  },
+  "input_read_Bps": 1830000000000.0,
+  "shared_read_Bpc": 57.5,
+  "library": [
+    {
+      "id": "cal_decode_1x6144x6144",
+      "shape": [
+        1,
+        6144,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_1x12288x6144",
+      "shape": [
+        1,
+        12288,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_1x24576x6144",
+      "shape": [
+        1,
+        24576,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_8x6144x6144",
+      "shape": [
+        8,
+        6144,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_8x12288x6144",
+      "shape": [
+        8,
+        12288,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_8x24576x6144",
+      "shape": [
+        8,
+        24576,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_32x6144x6144",
+      "shape": [
+        32,
+        6144,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_32x12288x6144",
+      "shape": [
+        32,
+        12288,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_32x24576x6144",
+      "shape": [
+        32,
+        24576,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_8x12288x4096",
+      "shape": [
+        8,
+        12288,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "cal_decode_8x12288x12288",
+      "shape": [
+        8,
+        12288,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "01_decode_1x8192x8192",
+      "shape": [
+        1,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "02_decode_1x28672x8192",
+      "shape": [
+        1,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "03_decode_2x8192x8192",
+      "shape": [
+        2,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "04_decode_2x28672x8192",
+      "shape": [
+        2,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "05_decode_4x8192x8192",
+      "shape": [
+        4,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "06_decode_4x28672x8192",
+      "shape": [
+        4,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "07_decode_8x8192x8192",
+      "shape": [
+        8,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "08_decode_8x28672x8192",
+      "shape": [
+        8,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "09_decode_16x8192x8192",
+      "shape": [
+        16,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "10_decode_16x28672x8192",
+      "shape": [
+        16,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "11_decode_32x8192x8192",
+      "shape": [
+        32,
+        8192,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "12_decode_32x28672x8192",
+      "shape": [
+        32,
+        28672,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "hold_decode_2x16384x6144",
+      "shape": [
+        2,
+        16384,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "hold_decode_16x32768x8192",
+      "shape": [
+        16,
+        32768,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "hold_decode_4x24576x8192",
+      "shape": [
+        4,
+        24576,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "hold_decode_32x16384x12288",
+      "shape": [
+        32,
+        16384,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_1x10240x5120",
+      "shape": [
+        1,
+        10240,
+        5120
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_4x10240x5120",
+      "shape": [
+        4,
+        10240,
+        5120
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_16x10240x5120",
+      "shape": [
+        16,
+        10240,
+        5120
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_32x20480x5120",
+      "shape": [
+        32,
+        20480,
+        5120
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        320,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_2x5120x10240",
+      "shape": [
+        2,
+        5120,
+        10240
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "val_decode_8x30720x5120",
+      "shape": [
+        8,
+        30720,
+        5120
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "validation_1x9216x7168",
+      "shape": [
+        1,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "validation_2x9216x7168",
+      "shape": [
+        2,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_4x9216x7168",
+      "shape": [
+        4,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "validation_8x9216x7168",
+      "shape": [
+        8,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "validation_16x9216x7168",
+      "shape": [
+        16,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_32x9216x7168",
+      "shape": [
+        32,
+        9216,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "validation_1x36864x7168",
+      "shape": [
+        1,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_2x36864x7168",
+      "shape": [
+        2,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_4x36864x7168",
+      "shape": [
+        4,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_8x36864x7168",
+      "shape": [
+        8,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_16x36864x7168",
+      "shape": [
+        16,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_32x36864x7168",
+      "shape": [
+        32,
+        36864,
+        7168
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_1x14336x12288",
+      "shape": [
+        1,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_2x14336x12288",
+      "shape": [
+        2,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_4x14336x12288",
+      "shape": [
+        4,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_8x14336x12288",
+      "shape": [
+        8,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_16x14336x12288",
+      "shape": [
+        16,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_32x14336x12288",
+      "shape": [
+        32,
+        14336,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_1x6656x4096",
+      "shape": [
+        1,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_2x6656x4096",
+      "shape": [
+        2,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_4x6656x4096",
+      "shape": [
+        4,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_8x6656x4096",
+      "shape": [
+        8,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_16x6656x4096",
+      "shape": [
+        16,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "validation_32x6656x4096",
+      "shape": [
+        32,
+        6656,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x28672x4096",
+      "shape": [
+        1,
+        28672,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x28672x4096",
+      "shape": [
+        32,
+        28672,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x28672x6144",
+      "shape": [
+        1,
+        28672,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x28672x6144",
+      "shape": [
+        32,
+        28672,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x28672x12288",
+      "shape": [
+        1,
+        28672,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x28672x12288",
+      "shape": [
+        32,
+        28672,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x32768x4096",
+      "shape": [
+        1,
+        32768,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x32768x4096",
+      "shape": [
+        32,
+        32768,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x32768x6144",
+      "shape": [
+        1,
+        32768,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x32768x6144",
+      "shape": [
+        32,
+        32768,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x32768x8192",
+      "shape": [
+        1,
+        32768,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x32768x8192",
+      "shape": [
+        32,
+        32768,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x32768x12288",
+      "shape": [
+        1,
+        32768,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x32768x12288",
+      "shape": [
+        32,
+        32768,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x36864x4096",
+      "shape": [
+        1,
+        36864,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x36864x4096",
+      "shape": [
+        32,
+        36864,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x36864x6144",
+      "shape": [
+        1,
+        36864,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x36864x6144",
+      "shape": [
+        32,
+        36864,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x36864x8192",
+      "shape": [
+        1,
+        36864,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x36864x8192",
+      "shape": [
+        32,
+        36864,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x36864x12288",
+      "shape": [
+        1,
+        36864,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x36864x12288",
+      "shape": [
+        32,
+        36864,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x40960x4096",
+      "shape": [
+        1,
+        40960,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x40960x4096",
+      "shape": [
+        32,
+        40960,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x40960x6144",
+      "shape": [
+        1,
+        40960,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x40960x6144",
+      "shape": [
+        32,
+        40960,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x40960x8192",
+      "shape": [
+        1,
+        40960,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x40960x8192",
+      "shape": [
+        32,
+        40960,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_1x40960x12288",
+      "shape": [
+        1,
+        40960,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x40960x12288",
+      "shape": [
+        32,
+        40960,
+        12288
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        256,
+        256,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 8,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        32,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x7168x4096",
+      "shape": [
+        32,
+        7168,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x7168x6144",
+      "shape": [
+        32,
+        7168,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x7168x8192",
+      "shape": [
+        32,
+        7168,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x8192x4096",
+      "shape": [
+        32,
+        8192,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x8192x6144",
+      "shape": [
+        32,
+        8192,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x9216x4096",
+      "shape": [
+        32,
+        9216,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x9216x6144",
+      "shape": [
+        32,
+        9216,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x9216x8192",
+      "shape": [
+        32,
+        9216,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x10240x4096",
+      "shape": [
+        32,
+        10240,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x10240x6144",
+      "shape": [
+        32,
+        10240,
+        6144
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x10240x8192",
+      "shape": [
+        32,
+        10240,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x12288x4096",
+      "shape": [
+        32,
+        12288,
+        4096
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "dev_extension_32x12288x8192",
+      "shape": [
+        32,
+        12288,
+        8192
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_1x9472x6656",
+      "shape": [
+        1,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_2x9472x6656",
+      "shape": [
+        2,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_4x9472x6656",
+      "shape": [
+        4,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_8x9472x6656",
+      "shape": [
+        8,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_16x9472x6656",
+      "shape": [
+        16,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_32x9472x6656",
+      "shape": [
+        32,
+        9472,
+        6656
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_1x38912x7680",
+      "shape": [
+        1,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_2x38912x7680",
+      "shape": [
+        2,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_4x38912x7680",
+      "shape": [
+        4,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_8x38912x7680",
+      "shape": [
+        8,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_16x38912x7680",
+      "shape": [
+        16,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_32x38912x7680",
+      "shape": [
+        32,
+        38912,
+        7680
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        64,
+        128,
+        16
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 4,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_1x15360x11264",
+      "shape": [
+        1,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_2x15360x11264",
+      "shape": [
+        2,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_4x15360x11264",
+      "shape": [
+        4,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_8x15360x11264",
+      "shape": [
+        8,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_16x15360x11264",
+      "shape": [
+        16,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_32x15360x11264",
+      "shape": [
+        32,
+        15360,
+        11264
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        256,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 2,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        16,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_1x6912x4608",
+      "shape": [
+        1,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_2x6912x4608",
+      "shape": [
+        2,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_4x6912x4608",
+      "shape": [
+        4,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_8x6912x4608",
+      "shape": [
+        8,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_16x6912x4608",
+      "shape": [
+        16,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        16,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        32,
+        8,
+        1
+      ]
+    },
+    {
+      "id": "acceptance_32x6912x4608",
+      "shape": [
+        32,
+        6912,
+        4608
+      ],
+      "kernel_count": 1,
+      "supported": true,
+      "tile": [
+        32,
+        128,
+        32
+      ],
+      "split_k": 1,
+      "arithmetic": "MMAC",
+      "global_vector_width": 2,
+      "prefetch_global": 1,
+      "prefetch_local": 1,
+      "workgroup": [
+        16,
+        16,
+        1
+      ]
+    }
+  ],
+  "schedules": {
+    "32x256x32": {
+      "engine_partition": [
+        2,
+        2
+      ]
+    },
+    "64x128x16": {
+      "operand_reuse": "fragment",
+      "padded_input_store": true,
+      "shared_read_write_serialized": true
+    }
+  },
+  "calibration": {
+    "n": 124,
+    "scope": "Development only; local dispatch metadata contains no timings; fixed-index task sweep identifies tail-wave scheduling",
+    "data": [
+      "development",
+      "validation",
+      "extension",
+      "acceptance"
+    ]
+  },
+  "respect_prefetch_waves": true
+}

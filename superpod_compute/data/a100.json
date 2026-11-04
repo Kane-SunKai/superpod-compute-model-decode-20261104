@@ -1,0 +1,21 @@
+{
+  "name": "A100-LLMCompass-with-project-budgets",
+  "cores": 108,
+  "clock_hz": 1410000000.0,
+  "arrays_per_core": 4,
+  "array_rows": 16,
+  "array_cols": 16,
+  "mac_per_cell_per_cycle": 1.0,
+  "vector_fp16_flops_per_cycle_per_core": 512,
+  "hbm_bandwidth_Bps": 2039000000000.0,
+  "hbm_latency_s": 1e-06,
+  "hbm_capacity_bytes": 80000000000,
+  "l2_bytes": 41943040,
+  "l2_bytes_per_cycle": 5120,
+  "source_sram_bytes_per_core": 196608,
+  "shared_budget_bytes_per_core": 131072,
+  "register_budget_bytes_per_core": 131072,
+  "register_reserve_bytes_per_core": 32768,
+  "kernel_launch_s": 2.1e-05,
+  "matrix_k_quantum": 16
+}

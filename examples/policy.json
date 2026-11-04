@@ -1,0 +1,13 @@
+{
+  "bm_values": [16, 32, 64, 128, 256],
+  "bn_values": [16, 32, 64, 128, 256],
+  "bk_values": [16, 32, 64, 128, 256, 512],
+  "buffer_counts": [1, 2],
+  "add_shape_candidate": true,
+  "matrix_efficiency": 1.0,
+  "charge_hbm_latency": false,
+  "l2_transfer_latency_s": 0.0,
+  "epilogue_s_per_wave": 0.0,
+  "transfer_resource_mode": "independent",
+  "top_k": 5
+}

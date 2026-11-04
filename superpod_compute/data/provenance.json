@@ -1,0 +1,16 @@
+{
+  "source_url": "https://github.com/PrincetonUniversity/LLMCompass/tree/ISCA_AE",
+  "source_commit": "not available in local reference snapshot; hashes recorded instead",
+  "license": "BSD-3-Clause",
+  "input_rows": 35561,
+  "unique_cycle_entries": 1049,
+  "source_sha256": {
+    "systolic_array_model/look_up_table_16_16.csv": "69447b4e376118a939967122a7de13849e5225cd6ba92bf65c8f37badbdd7607",
+    "software_model/matmul.py": "5e2d7db2385483f1e4bacb8764ebf59cc77f7db6fc9513321433766e0f0e63f6",
+    "hardware_model/compute_module.py": "4f3ca9d14be5b1d58c9aa7e6557ec0de5d3d944d4d91ae9ac4539e162f0eeea3",
+    "hardware_model/io_module.py": "fa1c37da2590c9b36a2198a60935cf6091d9d2deeb4f59937785ae465c1c5862",
+    "hardware_model/memory_module.py": "1505cf985a4f2da2e09aff3400edb6b05a2dfdb70be08eff822a885eebf88871"
+  },
+  "bundled_lut_sha256": "c8754568c896d2aacf635c70e84ecda9fa091101379a6a6d81326ff12df226a9",
+  "transformation": "Deduplicated identical keys/cycles, omitted utilization column; no cycle values changed."
+}

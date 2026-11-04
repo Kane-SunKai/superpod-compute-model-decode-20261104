@@ -1,0 +1,8 @@
+{
+  "dtype": "fp16",
+  "cases": [
+    {"name": "regular", "M": 3072, "N": 2304, "K": 1024},
+    {"name": "non_multiple", "M": 130, "N": 97, "K": 270},
+    {"name": "single_row", "M": 1, "N": 8192, "K": 8192}
+  ]
+}

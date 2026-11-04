@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.cache/
+results/
+dist/
+build/
+*.sqlite3*
+experiments/
+*_local_only*
+*.co
+*.hsaco
+*.so
+*.log
